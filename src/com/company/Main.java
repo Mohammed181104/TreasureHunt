@@ -8,7 +8,7 @@ public class Main {
     private static final String[][] board = new String[10][10];
     public static Random random = new Random();
 
-    public static void board(){
+    static void board(){
         //Creates the first board to show players all spaces available
         for (int i = 0; i< 10; i++){
             for (int j = 0; j<10; j++){
@@ -19,7 +19,7 @@ public class Main {
         }
         System.out.println("This is your board. It is 10 by 10.");
     }
-    public static void cheatBoard(){
+    static void cheatBoard(){
         // For checking contents of grid. NOT MEANT FOR PLAYERS
         for (int i = 0; i< 10; i++){
             for (int j = 0; j<10; j++){
@@ -28,7 +28,7 @@ public class Main {
             System.out.println(" ");
         }
     }
-    public static void playerBoard(){
+    static void playerBoard(){
         // For checking contents of grid. FOR PLAYERS
         for (int i = 0; i< 10; i++){
             for (int j = 0; j<10; j++){
@@ -41,7 +41,7 @@ public class Main {
             System.out.println(" ");
         }
     }
-    public static void boardItems(){
+    static void boardItems(){
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
                 int coinFlip = random.nextInt(7);
@@ -66,7 +66,7 @@ public class Main {
         // Assigns items(coins, monsters etc.) to the grid
         boardItems();
 
-        cheatBoard();
+        //cheatBoard();
 
         // Main game
         while (true) {
